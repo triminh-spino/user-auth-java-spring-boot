@@ -45,7 +45,7 @@ public class JwtFilterAuth extends OncePerRequestFilter {
  
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
  
-            var tokenType = TokenType.BEARER;
+            TokenType tokenType = TokenType.BEARER;
  
             jwt = authHeader.substring(7);
  
