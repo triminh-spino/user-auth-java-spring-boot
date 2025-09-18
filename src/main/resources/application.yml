@@ -1,0 +1,22 @@
+springdoc:
+    swagger-ui:
+        path: /api/demo-testing/
+        disable-swagger-default-url: true
+    api-docs:
+        path: /v1/api/docs
+spring:
+    application:
+        name: demo_testing
+    datasource:
+        url: jdbc:postgresql://localhost:5432/...
+        username: ...
+        password: ...
+    jpa:
+        defer-datasource-initialization: true
+        hibernate:
+            ddl-auto: update
+security:
+    jwt:
+        token:
+            secret: 17F46BD6952257ECC3D6876E6B5E1FD71924F641705572A0DF846382988CDC41
+        expire: 86400000
