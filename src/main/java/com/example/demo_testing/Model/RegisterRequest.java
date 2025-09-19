@@ -11,6 +11,7 @@ import lombok.*;
 @Setter
 @Builder
 public class RegisterRequest {
+
     @NotEmpty(message = "Email is empty.")
     @Email(message = "This is not email.")
     private String email;
@@ -22,4 +23,5 @@ public class RegisterRequest {
     @NotEmpty(message = "Name is empty.")
     @Length(min = 2, max = 100, message = "Name must be at least 2 characters long and not longer than 100 characters.")
     private String name;
+    
 }

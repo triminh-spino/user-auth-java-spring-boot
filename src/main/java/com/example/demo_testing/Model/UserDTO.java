@@ -14,12 +14,19 @@ import lombok.*;
 @Setter
 @Builder
 public class UserDTO {
+
     private UUID id;
+
     private String email;
+
     private String name;
+
     private Role role;
+
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime createdAt;
+
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime updatedAt;
+    
 }

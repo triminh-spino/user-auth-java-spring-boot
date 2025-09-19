@@ -11,6 +11,7 @@ import lombok.*;
 @Setter
 @Builder
 public class LoginRequest {
+
     @Email(message = "This is not email.")
     @NotEmpty(message = "Email is empty.")
     private String email;
@@ -18,4 +19,5 @@ public class LoginRequest {
     @Length(min = 8, message = "Password must at least 8 character long.")
     @NotEmpty(message = "Password is empty.")
     private String password;
+    
 }
