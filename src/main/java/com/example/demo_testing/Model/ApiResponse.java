@@ -15,7 +15,7 @@ import lombok.*;
 public class ApiResponse<T> {
     private int status;
     @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", shape = JsonFormat.Shape.STRING)
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss", shape = JsonFormat.Shape.STRING)
     private LocalDateTime timestamp;
     private String message;
     private T data;

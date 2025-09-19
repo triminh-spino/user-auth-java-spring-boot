@@ -50,6 +50,7 @@ public class JwtFilterAuth extends OncePerRequestFilter {
             jwt = authHeader.substring(7);
  
             try {
+
                 if (jwtService.checkTokenRevoked(jwt, tokenType)) {
                
                     userEmail = jwtService.extractUserName(jwt, tokenType);
@@ -74,6 +75,7 @@ public class JwtFilterAuth extends OncePerRequestFilter {
                         }
                     }
                 }
+                
             } catch (UnauthorizedException e) {
                 response.sendError(HttpServletResponse.SC_UNAUTHORIZED, e.getMessage());
                 return;
