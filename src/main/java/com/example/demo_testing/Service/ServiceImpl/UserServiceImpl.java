@@ -130,7 +130,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public ApiResponse<UserDTO> getProfile(User user) {
         UserDTO userDTO = userMapper.toDto(user);
-        return Response.createResponse(HttpStatus.CREATED, userDTO);
+        return Response.createResponse(HttpStatus.OK, userDTO);
     }
 
     @Override
